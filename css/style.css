@@ -1,0 +1,200 @@
+/* General Stylizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: sans-serif;
+}
+
+/* Canvas Stylize */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100vh;
+
+  background-color: grey;
+}
+
+/* Stylizing Buttons */
+button {
+  border: 1px solid rgb(77, 77, 77);
+  padding: 0.5em;
+  border-radius: 10px;
+
+  min-width: 2em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.4s;
+
+  cursor: pointer;
+  background-color: white;
+
+  color: rgb(77, 77, 77);
+}
+
+button:hover {
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+
+button i {
+  pointer-events: none;
+}
+
+/* Stylizing Input Bars */
+input,
+select {
+  background-color: white;
+
+  color: rgb(77, 77, 77);
+
+  padding: 0.5em;
+  border-radius: 10px;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.4s;
+}
+
+input:focus {
+  border-color: #ababab;
+}
+
+/* Stylizing App Box */
+.todo-container {
+  background-color: white;
+  padding: 30px;
+
+  width: clamp(450px, 600px, 800px);
+
+  border-radius: 30px;
+}
+
+.todo-container header {
+  text-align: center;
+  padding: 0 1rem 1rem;
+  border-bottom: 2px solid #ababab;
+}
+
+/* Todo Forms */
+#todo-form,
+#edit-form {
+  padding: 1rem;
+  border-bottom: 2px solid #ababab;
+}
+
+#todo-form p,
+#edit-form p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-control {
+  display: flex;
+  gap: 0.3rem;
+}
+
+#cancel-edit-button {
+  margin-top: 1rem;
+}
+
+/* Stylizing To do Toolbar */
+#toolbar {
+  padding: 1rem;
+  border-bottom: 2px solid #ababab;
+  display: flex;
+  gap: 1rem;
+}
+
+#toolbar h4 {
+  margin: 0.5rem;
+}
+
+#search {
+  padding-right: 1rem;
+  border-right: 2px solid #ababab;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+#search form {
+  display: flex;
+  gap: 1rem;
+}
+
+#filter {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stylizing Todo List */
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+
+  gap: 1rem;
+
+  transition: all 0.3s;
+
+  border-radius: 40px;
+  margin: 1rem 0;
+}
+
+.todo:hover {
+  background-color: #ababab;
+}
+
+.todo h3 {
+  flex: 1;
+  font-size: 0.9rem;
+
+  font-weight: normal;
+}
+
+.done {
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+
+.done h3 {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.done button {
+  background-color: rgb(77, 77, 77);
+  color: white;
+}
+
+dialog {
+  margin: auto;
+
+  background-color: white;
+  padding: 30px;
+
+  width: clamp(450px, 600px, 800px);
+
+  border: none;
+
+  border-radius: 30px;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
